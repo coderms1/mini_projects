@@ -1,0 +1,136 @@
+[[####-->>PYTHON ASSIGNMENT NOTES<<--####]]
+___________________________________________
+
+[[====>>>***PASSWORD VALIDATOR***<<<====]]
+DUE: 10/06/2024
+FOR ASSIGNMENT: 
+
+USERNAME (sName) - Must have a space >> Matt Simone
+--> Extract Initials ~ "MS"
+
+PASSWORD (sPassword):
+--> Must be 8 - 12 characters
+--> Cannot start or end with PASS or pass 
+--> Must have at least 1 uppercase letter
+--> Must have at least 1 number 0-9
+--> Must have at least 1 special characters
+--> Password cannot contain Initials adjacent or in order (i.e. CAN'T USE "ms"/"MS")
+--> Password cannot contain duplicate characters (do this last -> will learn )
+
+
+>> LISTS ~~~>> we will learn new technique Friday
+**DICTIONARIES SETS & PICKLING**
+
+>> AVOID repetitive code (inefficient) 
+
+*Helpful Link: https://www.w3schools.com/python/python_ref_string.asp
+
+NO REGEX -+-+-+-
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+////////////////////////////////////////////////
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+In coding Logical or Conditional Statements are features of a programming language, which perform different computations or actions depending on whether a programmer-specified condition is either true or false.
+This is achieved by selectively altering the control flow based on some condition.  For example below only ONE of the things can occur not both. Depending on if A is true B will happen.  If A is false then C will happen.  B and C both can not occur.  Imagine you are driving your car into stop sign point A.  You can only go right or left and not both ways.
+
+****If Statement Flow Chart****
+
+To start with Python supports these Logical Statements:
+if
+if else
+if elif
+To compare variable you can use these Logical Operators:
+
+==  equal to notice it is two == signs.  
+The one equal sign is to assign a value to a variable
+
+!=   not equal to
+<    less than
+>    greater than
+<=  less than or equal to
+>=  greater than or equal to
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+////////////////////////////////////////////////
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Write a Python program to calculate someone’s pay for the week.
+
+1. Ask the user for input and receive and convert to proper data types.
+
+-How many hours they worked during the week.  What data type are you thinking would be best and make sure to convert the input to that data type.
+
+-What is their pay rate. What data type are you thinking would be best and make sure to convert the input to that data type.
+
+2. Write logical statements to do the following to calculate:
+
+-Regular Pay: Any hours worked 1 - 40 they get hours worked * hourly rate. 
+
+-Overtime Pay: If they worked over 40 to 60 hours they get time and half for those hours.
+
+-Doubletime Pay: Any hours over 60 is paid at a double time rate. 
+
+For example:
+Dan worked 39 hours at $15 his pay would be:
+ 39 * 15 = $585.00
+
+Joe worked 55 hours at $20 his pay would be:
+ (40 * 20) + (15 *  (20 * 1.5) = 800 + 450 = $1250
+
+Lou worked 65 hours at $35 his pay would be:
+ (40 * 35) + (20 *  (35 * 1.5) + (5 * (35 * 2)  = 1400 + 1050  + 350 = $2800
+
+
+3. Output the Regular Pay, Overtime Pay and Doubletime Pay to the screen.
+4. Try to write the code as efficient as possible. This means the code should be understandable, executes efficiently and has little to no redundancy.
+
+Sample Output:
+
+Enter hours worked: 39
+Enter hourly rate: 15
+Regular Pay is: $ 585.00
+Time and Half Pay is: $ 0.00
+Double Time Pay is: $ 0.00
+Total Pay is: $ 585.00
+
+===== Sample 2 =====
+Enter hours worked: 55
+Enter hourly rate: 20
+Regular Pay is: $ 800.00
+Time and Half Pay is: $ 450.00
+Double Time Pay is: $ 0.00
+Total Pay is: $ 1,250.00
+
+===== Sample 3 =====
+Enter hours worked: 65
+Enter hourly rate: 35
+Regular Pay is: $ 1,400.00
+Time and Half Pay is: $ 1,050.00
+Double Time Pay is: $ 350.00
+Total Pay is: $ 2,800.00
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+////////////////////////////////////////////////
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Dog Age Calculator with If Logic...
+ When we first wrote the Dog Age Calculator it was to gain  practice using Python's functions: input(), int(), float()
+ format() and arithmetic operators.
+
+ Now we will enhance the initial Dog Age to include more accurate
+ Calculations:
+ 1. The first year of a dog's age is actually equal to 12 human years
+ 2. Every years after the first year is 7.3 years.
+
+ For example:
+ A dog that is .5 (6 months old) would be 6 = .5 x 12
+
+ A dog that is 13.75 would be 105.075 = (13.75 - 1) * 7.3 + 12
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+////////////////////////////////////////////////
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
