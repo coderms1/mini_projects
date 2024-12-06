@@ -1,7 +1,9 @@
-# Assignment: Numerology (submitted version) - 95/100 (95%)
+# Assignment: Numerology (submitted version)
 # Class: Python-2 w/ Prof C *
 # Author: Matthew Simone
 # Due Date: 11/17/2024
+'''This is the first version of the UseNumerology class.
+Completed on 11/17/2024.'''
 
 # Import the Numerology class from Numerology file (technically step 1?)
 from Numerology import Numerology
