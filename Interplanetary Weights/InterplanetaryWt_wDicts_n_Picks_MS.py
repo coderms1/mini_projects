@@ -1,6 +1,6 @@
 # Assignment: Interplanetary Weights w/ Dictionary/Pickling 
 # Class: Python2 w/ Prof C *
-# Author: Matthew Simone (aka c0d3r.s!m)
+# Author: msimone2301 (aka c0d3r.s!m)
 # Due Date: 10/20/2024
 
 # IMPORT THE PICKLE! (technically Step 1?!)
