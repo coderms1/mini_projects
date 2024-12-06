@@ -1,6 +1,6 @@
 # Assignment: Numerology (submitted version)
 # Class: Python-2 w/ Prof C *
-# Author: Matthew Simone
+# Author: msimone2301 (zim)
 # Due Date: 11/17/2024
 '''This is the first version of the UseNumerology class.
 Completed on 11/17/2024.'''
