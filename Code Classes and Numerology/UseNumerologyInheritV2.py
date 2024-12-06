@@ -2,7 +2,7 @@
 
 # Assignment: Numerology with Inheritance 
 # Class: Python-2 w/ Prof C *
-# Author: Matthew Simone
+# Author: msimone2301 (zim)
 # Due Date: 12/01/2024
 
 # Import the Numerology class from Numerology.py
