@@ -1,6 +1,6 @@
 # Assignment: Password Validator ([2.0])
 # Class: CIT-117 ~ (Python-2 w Prof C)
-# Author: Matthew Simone
+# Author: msimone2301 (zim)
 # Due Date: 10/06/24
 
 def main():  
