@@ -1,7 +1,6 @@
 # Numerology.py
-'''This is the submitted version of the Numerology class.
-Submitted on 11/17/2024.
-95% grade received.'''
+'''This is the first version of the Numerology class.
+Completed on 11/17/2024.'''
 # Assignment: Numerology (submitted version) - 95/100 (95%)
 # Class: Python-2 w/ Prof C *
 # Author: Matthew Simone
