@@ -55,7 +55,7 @@ public class CountryQuiz {
                     Paths.get(Objects.requireNonNull(getClass().getClassLoader()
                             .getResource("countries-data.csv")).toURI()),
                     StandardCharsets.UTF_8);
-            lines.remove(0); // Remove header
+            lines.remove(0);
             for (String line : lines) {
                 String[] data = line.split(",");
                 countries.add(new CountryQ(data[0], data[1], data[2], data[3]));
