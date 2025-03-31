@@ -30,8 +30,12 @@ A collective of programs assigned and deployed at STCC.
 - Python
 - SQLite
 - CSV file handling
+- Java
+- SwingUI forms
 - Git/GitHub
-
+- VS-Code
+- PyCharm
+- IntelliJ
 ---
 
-## ***THIS IS JUST THE BEGINNING!***
+## ***THIS IS JUST THE BEGINNING!*** ##
