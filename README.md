@@ -19,7 +19,7 @@ Welcome to my **School Projects Repository**!
 8. Compound Interest Calculator Level 2 -py- (https://github.com/coderms1/sticky_c0de/blob/main/compound_int_calc_L-2.py)
 9. Planetary Weights Calculator Level 1 -py- (https://github.com/coderms1/sticky_c0de/blob/main/planetary_weight_calc_L-1.py)
 10. Temperature Converter Level 1 -py- (https://github.com/coderms1/sticky_c0de/blob/main/temperature_converter_L-1.py)
-11. Country GUI w/ Quiz -java- ()
+11. Country GUI w/ Quiz -java- (https://github.com/coderms1/sticky_c0de/tree/main/CountryQuiz)
 ---
 
 ## Overview
