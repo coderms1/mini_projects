@@ -55,17 +55,14 @@ while True:
 
 fMonthlyRate = (fInterestRate / 100) / 12
 fAccountBalance = fDeposit
-
+iPredictionMonths = 0
 for iMonth in range(1, iMonths + 1):
     fMonthInterest = fAccountBalance * fMonthlyRate
     fAccountBalance += fMonthInterest
     print(f"Month: {iMonth:<2} Account Balance is: ${fAccountBalance:>,.2f}")
+    while fDeposit < fGoal:
+        fMonthInterest = fDeposit * fMonthlyRate
+        fDeposit += fMonthInterest
+        iPredictionMonths += 1
 
-
-fPredictionBalance = fDeposit
-iPredictionMonths = 0
-while fPredictionBalance < fGoal:
-    fMonthInterest = fPredictionBalance * fMonthlyRate
-    fPredictionBalance += fMonthInterest
-    iPredictionMonths += 1
 print(f"It will take: {iPredictionMonths} months to reach your goal of ${fGoal:,.2f}")
