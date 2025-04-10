@@ -58,8 +58,7 @@ for iMonth in range(1, iMonths + 1):
     print(f"Month: {iMonth:<2} Account Balance is: ${fBalance:>,.2f}")
 
 
-if fGoal > 0.0:
-    if fDeposit <= fGoal:
+if fGoal > 0.0 and fDeposit <= fGoal:
         iMonth = 0
         while fDeposit < fGoal:
             fDeposit += fDeposit * fRate
