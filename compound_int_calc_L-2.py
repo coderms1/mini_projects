@@ -27,8 +27,8 @@ while True:
 
 while True:
     try:
-        fInterestRate = float(input("What is the Interest rate (positive value): "))
-        if fInterestRate > 0:
+        fRate = float(input("What is the Interest rate (positive value): ")) / 100.00 / 12
+        if fRate > 0:
             break
         print(sPOSITIVE_ERROR)
     except ValueError:
@@ -52,17 +52,19 @@ while True:
     except ValueError:
         print(sNUMERIC_ERROR)
 
-
-fMonthlyRate = (fInterestRate / 100) / 12
-fAccountBalance = fDeposit
-iPredictionMonths = 0
+fBalance = fDeposit
 for iMonth in range(1, iMonths + 1):
-    fMonthInterest = fAccountBalance * fMonthlyRate
-    fAccountBalance += fMonthInterest
-    print(f"Month: {iMonth:<2} Account Balance is: ${fAccountBalance:>,.2f}")
-    while fDeposit < fGoal:
-        fMonthInterest = fDeposit * fMonthlyRate
-        fDeposit += fMonthInterest
-        iPredictionMonths += 1
+    fInterest = fBalance * fRate
+    fBalance += fInterest
+    print(f"Month: {iMonth:<2} Account Balance is: ${fBalance:>,.2f}")
 
-print(f"It will take: {iPredictionMonths} months to reach your goal of ${fGoal:,.2f}")
+
+if fGoal > 0.0:
+    if fDeposit <= fGoal:
+        fBalance = fDeposit
+        iMonth = 0
+        while fBalance < fGoal:
+            fBalance += fBalance * fRate
+            iMonth += 1
+
+    print(f"It will take {iMonth} months to reach your goal of ${fGoal:,.2f}")
