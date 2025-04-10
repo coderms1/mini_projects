@@ -54,17 +54,14 @@ while True:
 
 fBalance = fDeposit
 for iMonth in range(1, iMonths + 1):
-    fInterest = fBalance * fRate
-    fBalance += fInterest
+    fBalance += fBalance * fRate
     print(f"Month: {iMonth:<2} Account Balance is: ${fBalance:>,.2f}")
 
 
 if fGoal > 0.0:
     if fDeposit <= fGoal:
-        fBalance = fDeposit
         iMonth = 0
-        while fBalance < fGoal:
-            fBalance += fBalance * fRate
+        while fDeposit < fGoal:
+            fDeposit += fDeposit * fRate
             iMonth += 1
-
-    print(f"It will take {iMonth} months to reach your goal of ${fGoal:,.2f}")
+        print(f"It will take {iMonth} months to reach your goal of ${fGoal:,.2f}")
