@@ -14,10 +14,10 @@ This program prompts the user for a name and four test
 user inputs the incorrect data type or expected response.
 """
 
-import sys
+import sys # allows sys.exit
 
 # Prompt for student's name
-sStudentName = input("Enter the student's name: ")
+sStudent = input("Enter the student's name: ")
 
 # Prompt for 4 test scores
 print("Enter the 4 test scores:")
@@ -35,19 +35,24 @@ if iTest1 < 0 or iTest2 < 0 or iTest3 < 0 or iTest4 < 0:
 
 # Validate user input (must be Y or N)
 if sDropLowest == "Y":
-    # Find the lowest grade - calculate average
+    fDivisor = 3.0
+    # Find the lowest grade
     if iTest1 <= iTest2 and iTest1 <= iTest3 and iTest1 <= iTest4:
-        fAverage = (iTest2 + iTest3 + iTest4) / 3
-    elif iTest2 <= iTest1 and iTest2 <= iTest3 and iTest2 <= iTest4:
-        fAverage = (iTest1 + iTest3 + iTest4) / 3
-    elif iTest3 <= iTest1 and iTest3 <= iTest2 and iTest3 <= iTest4:
-        fAverage = (iTest1 + iTest2 + iTest4) / 3
+        iLowTest = iTest1
+    elif iTest2 <= iTest3 and iTest2 <= iTest4:
+        iLowTest = iTest2
+    elif iTest3 <= iTest4:
+        iLowTest = iTest3
     else:
-        fAverage = (iTest1 + iTest2 + iTest3) / 3
+        iLowTest = iTest4
 elif sDropLowest == "N":
-    fAverage = (iTest1 + iTest2 + iTest3 + iTest4) / 4
+    iLowTest = 0
+    fDivisor = 4.0
 else:
     sys.exit("Enter Y or N to Drop the Lowest Grade.")
+
+# Calculate the average
+fAverage = (iTest1 + iTest2 + iTest3 + iTest4) - iLowTest / fDivisor
 
 # Process: Determine Letter Grade using Average
 if fAverage >= 97.0:
@@ -78,5 +83,5 @@ else:
     sLetterGrade = "F"
 
 # Output: Display results to user
-print(f"{sStudentName}'s test average is: {fAverage:.1f}")
+print(f"{sStudent}'s test average is: {fAverage:.1f}")
 print(f"Letter grade for the test is: {sLetterGrade}")
