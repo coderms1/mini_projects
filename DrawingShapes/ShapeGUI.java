@@ -2,6 +2,15 @@
 // Project: Draw Shapes w/ GUI
 // Date: 4-8-2025
 
+/*
+   This Java program creates a GUI that lets users draw 
+       and move rectangles and squares. Users can click to place shapes, 
+           drag them around, and can also use their pointer to draw freehand lines. 
+           The "Clear" button wipes everything clean for a fresh start.  
+       It uses custom painting logic and IntelliJ's interactive Swing components, 
+   in order to create a most basic interactive canvas.
+*/
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
