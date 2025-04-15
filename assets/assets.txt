@@ -1,3 +1,0 @@
-.gitkeep
-background-clouds.jpg
-dog.png
