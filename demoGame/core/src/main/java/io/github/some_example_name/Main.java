@@ -1,3 +1,18 @@
+// First Demo Game using libGDX Framework
+// Date: 4-15-2025
+// Author: zim
+
+ 
+/*    This simple Java program built with libGDX features an 
+        animated dog sprite that hops across a scenic background. 
+            The dog moves from the left to the right side of the 
+                screen, then hops back to the center and stops, 
+            all while bouncing smoothly with a sine-wave animation. 
+        It's a minimal yet fun demonstration of sprite movement, 
+    viewport handling, and animation timing in a 2D game environment. 
+*/
+
+
 package io.github.some_example_name;
 
 import com.badlogic.gdx.ApplicationListener;
@@ -61,16 +76,19 @@ public class Main implements ApplicationListener {
     @Override
     public void pause() {
         // Invoked when your application is paused.
+        // More to be built here.
     }
 
     @Override
     public void resume() {
         // Invoked when your application is resumed after pause.
+        // More to be built here.
     }
 
     @Override
     public void dispose() {
         // Destroy application's resources here.
+        // More to be built here.
     }
 
     public void move() {
