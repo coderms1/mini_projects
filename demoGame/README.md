@@ -4,14 +4,13 @@ A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://git
 
 This project was generated with a template including simple application launchers and an empty `ApplicationListener` implementation.
 
-#############  
+## Description  
 
 This simple program features an animated dog sprite that is maneuvered across a scenic background using the Left & Right 
 Directional keys, and offers a jump button (spacebar). Another addition to the first program is a ball that bounces 
 across the screen and upon collision with the puppy the dog makes a "BARK!" noise. It's a fun and minimal demonstration 
 of sprite movement, viewport handling, and animation timing in a 2D game environment. 
 
-#############  
 
 ## Platforms
 
