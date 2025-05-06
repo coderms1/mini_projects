@@ -1,5 +1,5 @@
-# MINI BANKING SYSTEM ~ Capstone Project*
-# Coder: zim
+# MINI BANKING SYSTEM ~ Capstone Project
+# Coder: Zim
 
 ################################################################################
 #  This program runs a simple little banking system with a menu that lets     ##
@@ -26,82 +26,88 @@ def prompt_for_input(sPrompt):
             print("Enter a valid number.")
 
 # DEPOSIT Function
-def deposit(balance, transactions):
+def deposit(balance, txn_list):
     fAmount = prompt_for_input("Enter deposit amount: ")
     balance += fAmount
-    transactions.append(("Deposited:", fAmount))
+    txn_list.append(("Deposited:", fAmount))
     print(f"Deposit successful! New balance: ${format_currency(balance)}\n")
-    return balance, transactions
+    return balance, txn_list
 
 # WITHDRAW Function
-def withdraw(balance, transactions):
+def withdraw(balance, txn_list):
     fAmount = prompt_for_input("Enter withdrawal amount: ")
     if fAmount > balance:
         print("Insufficient Funds.\n")
     else:
         balance -= fAmount
-        transactions.append(("Withdrew:", fAmount))
+        txn_list.append(("Withdrew:", fAmount))
         print(f"Withdrawal successful! New balance: ${format_currency(balance)}\n")
-    return balance, transactions
+    return balance, txn_list
 
 # CHECK BALANCE Function
 def check_balance(balance):
     print(f"Your current balance is: ${format_currency(balance)}\n")
 
 # VIEW TRANSACTION Function
-def view_transaction_history(transactions):
+def view_history(txn_list):
     print("\nTransaction History:")
     print("+----------------------+----------------+")
-    if not transactions:
-        print("| No transactions yet.                |")
+    if not txn_list:
+        print(f"| No transactions yet. {' ':*15}|")
     else:
-        for sType, fAmt in transactions:
+        for sType, fAmt in txn_list:
             print(f"| {sType:<20} ${format_currency(fAmt)} |")
     print("+----------------------+----------------+\n")
 
 # APPLY INTEREST Function
-def apply_interest(balance, transactions):
+def add_interest(balance, txn_list):
     if balance == 0:
         print("Balance is $0.00 — no interest will be applied.\n")
-        return balance, transactions
+        return balance, txn_list
     fRate = prompt_for_input("Enter interest rate: ")
     fInterest = balance * (fRate / 100) / 12
     balance += fInterest
-    transactions.append(("Interest:", fInterest))
+    txn_list.append(("Interest:", fInterest))
     print(f"Interest has been applied: ${format_currency(fInterest)} New balance: ${format_currency(balance)}\n")
-    return balance, transactions
+    return balance, txn_list
 
 # SAVE TO FILE Function
-def save_to_file(balance, transactions):
+def save_to_file(balance, txn_list):
     sFileName = "BankStatement.txt"
-    box_width = 43
+    _BOX_WIDTH_ = 43
+    _CONTENT_WIDTH_ = 41
 
     with open(sFileName, "w") as f:
-        f.write("+" + "-" * (box_width - 2) + "+\n")
-        f.write(f"| {'Zim`s Mini Bank':^{box_width - 2}} |\n")
-        f.write(f"| {'Transaction History':^{box_width - 2}} |\n")
-        f.write("+" + "-" * (box_width - 2) + "+\n")
+        # Write header
+        f.write("+" + "-" * _CONTENT_WIDTH_ + "+\n")
+        f.write(f"| {'Zim`s Mini Bank':^{_CONTENT_WIDTH_}} |\n")
+        f.write(f"| {'Transaction History':^{_CONTENT_WIDTH_}} |\n")
+        f.write("+" + "-" * _CONTENT_WIDTH_ + "+\n")
 
-        if not transactions:
-            f.write(f"| {'No transactions yet.':<{box_width - 2}} |\n")
+        # Write transaction history
+        if not txn_list:
+            f.write(f"| {'No transactions yet.':<{_CONTENT_WIDTH_}} |\n")
         else:
-            for sType, fAmt in transactions:
-                formatted_amt = format_currency(fAmt)
-                f.write(f"| {sType:<20} ${formatted_amt:>16} |\n")
+            for sType, fAmt in txn_list:
+                formatted_amt = f"{fAmt:>13,.2f}"
+                line = f"| {sType:<20} ${formatted_amt:>19} |"
+                f.write(line[:_CONTENT_WIDTH_ + 1] + " |\n")
 
-        f.write(f"|{'':<{box_width - 2}}|\n")
-        f.write(f"| Ending Balance:      ${format_currency(balance):>16} |\n")
-        f.write(f"| Transactions Total:  {len(transactions):>16} |\n")
-        f.write("+" + "-" * (box_width - 2) + "+\n")
+        # Write out footer info
+        f.write(f"| {'':<{_CONTENT_WIDTH_}} |\n")
+        formatted_balance = f"{balance:>13,.2f}"
+        f.write(f"| {'Ending Balance:':<20} ${formatted_balance:>19} |\n")
+        f.write(f"| {'Transactions Total:':<20} {len(txn_list):>19} |\n")
+        f.write("+" + "-" * _CONTENT_WIDTH_ + "+\n")
 
     print(f"Transaction history saved to {sFileName}\n")
 
 # MAIN Function
 def main():
     print("Welcome to Zim's Mini-Bank")
-
+    # Begin
     balance = 0.0
-    transactions = []
+    txn_list = []
 
     while True:
         print("""
@@ -119,23 +125,25 @@ def main():
             print("Invalid input. Please enter a number from 1 to 7.\n")
             continue
 
-        if iChoice == 1:
-            balance, transactions = deposit(balance, transactions)
-        elif iChoice == 2:
-            balance, transactions = withdraw(balance, transactions)
-        elif iChoice == 3:
-            check_balance(balance)
-        elif iChoice == 4:
-            view_transaction_history(transactions)
-        elif iChoice == 5:
-            balance, transactions = apply_interest(balance, transactions)
-        elif iChoice == 6:
-            save_to_file(balance, transactions)
-        elif iChoice == 7:
-            print("Thanks for using the Mini Bank! Bank statement generated.\nGoodbye!")
-            break
-        else:
-            print("Invalid option. Please select from the menu.\n")
+        # ATM Choice menu
+        match iChoice:
+            case 1:
+                balance, txn_list = deposit(balance, txn_list)
+            case 2:
+                balance, txn_list = withdraw(balance, txn_list)
+            case 3:
+                check_balance(balance)
+            case 4:
+                view_history(txn_list)
+            case 5:
+                balance, txn_list = add_interest(balance, txn_list)
+            case 6:
+                save_to_file(balance, txn_list)
+            case 7:
+                print("Thanks for using Zim's Mini Bank! Bank statement generated.\nGoodbye! Come back soon.")
+                break
+            case _:
+                print("Invalid option. Please select from the menu.\n")
 
 # Call main() funkytown
 if __name__ == "__main__":
