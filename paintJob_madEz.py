@@ -1,5 +1,5 @@
 # Paint Job Estimator (Made EZ: Version 3.0)
-# Coder: zim
+# Coder: sim
 
 from math import ceil
 
