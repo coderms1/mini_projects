@@ -1,7 +1,6 @@
 # Lists and Real Estate Analyzer Using Files: *V2.0*
 # Class: Python-2 w/ Prof C - Fall 2024
-# Author: msimone2301 (zim)
-# Due Date: 11/03/2024 
+# Author: sim
 #-----------------------#
 ###UPDATED 11/05/2024###
 # !!!--> Now contains ZIP code output <--!!!
