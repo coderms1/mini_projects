@@ -2,7 +2,7 @@
 
 # Assignment: Numerology with Inheritance 
 # Class: Python-2 w/ Prof C *
-# Author: msimone2301 (zim)
+# Author: sim
 # Due Date: 12/01/2024
 
 class NumerologyLifePathDetails:
