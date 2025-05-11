@@ -1,7 +1,6 @@
 # Assignment: Password Validator
 # Class: CIT-117 ~ (Python-2 w Prof C)
-# Author: msimone2301 (zim)
-# Due Date: 10/06/24
+# Author: sim
 
 def main():  
     # Step 2: Prompt the user for a valid full name until it is entered correctly
