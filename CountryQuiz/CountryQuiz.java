@@ -1,7 +1,7 @@
 // Java (CIT 215): Lab 8
 // Program: Country Gui w/ Quiz
 // Due Date: 04-01-2025
-// Author: Matthew Simone
+// Author: sim
 
 import javax.swing.*;
 import java.awt.*;
