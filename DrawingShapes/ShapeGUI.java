@@ -1,6 +1,5 @@
 // File: ShapeGUI.java
 // Project: Draw Shapes w/ GUI
-// Date: 4-8-2025
 
 /*
    This Java program creates a GUI that lets users draw 
