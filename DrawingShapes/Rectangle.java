@@ -1,7 +1,5 @@
 // File: Rectangle.java
 // Project: Draw Shapes w/ GUI
-// Date: 4-8-2025
-
 
 import java.awt.*;
 
