@@ -1,6 +1,6 @@
 # Planetary Weights Calculator
 # Python 101 - Mini Projects
-# Coder: zim
+# Coder: sim
 
 """
 This program asks the user for their name and Earth weight in pounds,
