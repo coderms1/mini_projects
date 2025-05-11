@@ -1,6 +1,5 @@
 # Compounding Interest Calculator 📱
-# Python w/ Prof C *
-# 02-25-2025
+# Coder: sim
 
 # INPUT (Prompt user)
 f_principle = float(input("Enter the starting principal: "))
