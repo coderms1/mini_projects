@@ -1,6 +1,6 @@
 # Compound Interest Calculator w/ Loops (Level 2)
 # PYTHON 101 - Mini Projects
-# Coder: zim
+# Coder: sim
 
 """
 This program prompts the user for an original deposit, an interest rate,
