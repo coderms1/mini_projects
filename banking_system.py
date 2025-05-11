@@ -1,5 +1,5 @@
 # MINI BANKING SYSTEM ~ Capstone Project
-# Coder: Zim
+# Coder: sim
 
 ################################################################################
 #  This program runs a simple little banking system with a menu that lets     ##
@@ -11,13 +11,13 @@
 
 # FORMAT CURRENCY Function
 def format_currency(amount):
-    return f"{amount:>13,.2f}"
+    return f"{amount:>12,.2f}"
 
 # PROMPT FOR INPUT Function
-def prompt_for_input(sPrompt):
+def prompt_for_input(prompt):
     while True:
         try:
-            fAmount = float(input(sPrompt))
+            fAmount = float(input(prompt))
             if fAmount > 0:
                 return fAmount
             else:
@@ -74,31 +74,33 @@ def add_interest(balance, txn_list):
 # SAVE TO FILE Function
 def save_to_file(balance, txn_list):
     sFileName = "BankStatement.txt"
-    _BOX_WIDTH_ = 43
-    _CONTENT_WIDTH_ = 41
+    _CONTENT_WIDTH_ = 30  # Smaller width for compact box
+
+    # Calculate total deposited and withdrawn
+    total_deposited = sum(amt for typ, amt in txn_list if typ == "Deposited:")  # Sum all deposit amounts
+    total_withdrawn = sum(amt for typ, amt in txn_list if typ == "Withdrew:")  # Sum all withdrawal amounts
 
     with open(sFileName, "w") as f:
-        # Write header
-        f.write("+" + "-" * _CONTENT_WIDTH_ + "+\n")
-        f.write(f"| {'Zim`s Mini Bank':^{_CONTENT_WIDTH_}} |\n")
-        f.write(f"| {'Transaction History':^{_CONTENT_WIDTH_}} |\n")
-        f.write("+" + "-" * _CONTENT_WIDTH_ + "+\n")
+        # Write header without box
+        f.write(f"{'Zim`s Mini Bank':^30}\n")
+        f.write(f"{'Transaction History':^30}\n")
+        f.write("\n")
 
-        # Write transaction history
+        # Write transaction history without box
         if not txn_list:
-            f.write(f"| {'No transactions yet.':<{_CONTENT_WIDTH_}} |\n")
+            f.write(f"{'No transactions yet.':^30}\n")
         else:
             for sType, fAmt in txn_list:
-                formatted_amt = f"{fAmt:>13,.2f}"
-                line = f"| {sType:<20} ${formatted_amt:>19} |"
-                f.write(line[:_CONTENT_WIDTH_ + 1] + " |\n")
+                formatted_amt = format_currency(fAmt)
+                f.write(f"{sType:<12} ${formatted_amt.strip():>12}\n")
+        f.write("\n")
 
-        # Write out footer info
-        f.write(f"| {'':<{_CONTENT_WIDTH_}} |\n")
-        formatted_balance = f"{balance:>13,.2f}"
-        f.write(f"| {'Ending Balance:':<20} ${formatted_balance:>19} |\n")
-        f.write(f"| {'Transactions Total:':<20} {len(txn_list):>19} |\n")
-        f.write("+" + "-" * _CONTENT_WIDTH_ + "+\n")
+        # Write boxed summary
+        f.write(f"+{'-' * _CONTENT_WIDTH_}+\n")
+        f.write(f"| {f'Total Deposited: ${format_currency(total_deposited).strip()}':<{_CONTENT_WIDTH_}} |\n")
+        f.write(f"| {f'Total Withdrawn: ${format_currency(total_withdrawn).strip()}':<{_CONTENT_WIDTH_}} |\n")
+        f.write(f"| {f'Balance: ${format_currency(balance).strip()}':<{_CONTENT_WIDTH_}} |\n")
+        f.write(f"+{'-' * _CONTENT_WIDTH_}+\n")
 
     print(f"Transaction history saved to {sFileName}\n")
 
@@ -116,17 +118,16 @@ def main():
 3. Check Balance
 4. View Transaction History
 5. Apply Interest Calculation
-6. Save Transaction History to a File
-7. Exit
+6. Save Transaction History and Exit
 """)
         try:
-            iChoice = int(input("Choose an option (1–7): "))
+            i_choice = int(input("Choose an option (1–6): "))
         except ValueError:
-            print("Invalid input. Please enter a number from 1 to 7.\n")
+            print("Invalid input. Please enter a number from 1 to 6.\n")
             continue
 
         # ATM Choice menu
-        match iChoice:
+        match i_choice:
             case 1:
                 balance, txn_list = deposit(balance, txn_list)
             case 2:
@@ -139,7 +140,6 @@ def main():
                 balance, txn_list = add_interest(balance, txn_list)
             case 6:
                 save_to_file(balance, txn_list)
-            case 7:
                 print("Thanks for using Zim's Mini Bank! Bank statement generated.\nGoodbye! Come back soon.")
                 break
             case _:
