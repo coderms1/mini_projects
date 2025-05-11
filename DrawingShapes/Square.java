@@ -1,6 +1,5 @@
 // File: Square.java
 // Project: Draw Shapes w/ GUI
-// Date: 4-8-2025
 
 public class Square extends Rectangle {
 
