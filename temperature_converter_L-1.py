@@ -1,6 +1,6 @@
 # Temperature Converter (Level 1)
 # Python 101 - Mini Projects
-# Coder: zim
+# Coder: sim
 
 """
 This program prompts the user to input a temperature value and its scale
