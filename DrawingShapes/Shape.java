@@ -1,6 +1,5 @@
 // File: Shape.java
 // Project: Draw Shapes w/ GUI
-// Date: 4-8-2025
 
 
 public class Shape {
