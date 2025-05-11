@@ -3,7 +3,7 @@
 Completed on 11/17/2024.'''
 # Assignment: Numerology (submitted version) - 95/100 (95%)
 # Class: Python-2 w/ Prof C *
-# Author: msimone2301 (zim)
+# Author: sim
 # Due Date: 11/17/2024
 
 class Numerology:
