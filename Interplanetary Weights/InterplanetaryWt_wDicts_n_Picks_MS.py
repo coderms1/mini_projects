@@ -1,7 +1,6 @@
 # Assignment: Interplanetary Weights w/ Dictionary/Pickling 
 # Class: Python2 w/ Prof C *
-# Author: msimone2301 (aka c0d3r.s!m)
-# Due Date: 10/20/2024
+# Author: sim
 
 # IMPORT THE PICKLE! (technically Step 1?!)
 import pickle
