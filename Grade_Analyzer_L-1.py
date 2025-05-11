@@ -1,6 +1,6 @@
 ## Grade Analyzer ##
 # Python 101 - Mini Projects
-# Coder: zim
+# Coder: sim
 
 """
 This program prompts the user for a name and four test
