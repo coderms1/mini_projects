@@ -24,6 +24,7 @@ Welcome to my **School Projects Repository**!
 
 ## Overview
 A collective of programs assigned and deployed at STCC.
+Just me tinkering. Small, focused scripts to test ideas and build fluency in Python.
 ---
 
 ## Resources Utilized in Repo
