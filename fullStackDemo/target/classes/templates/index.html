@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <style>
+        body {
+        background-color: lightblue;
+    </style>
+
+</head>
+<body>
+<h1>Customers</h1>
+
+<h3>Search</h3>
+
+<form th:action="@{/search}" method="get">
+    <input type="text" name="query" placeholder="Search by name" required />
+    <button type="submit">Search</button>
+</form>
+
+
+<form th:action="@{/create}" method="post">
+    <input type="text" name="name" placeholder="Name" th:value="${customer.name}" required />
+    <input type="text" name="address" placeholder="Address" th:value="${customer.address}" required />
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+
+    <li th:each="c : ${customers}">
+        <span th:text="${c.name}"></span>
+        (Address: <span th:text="${c.address}"></span> )
+    </li>
+
+</ul>
+
+</body>
+</html>
