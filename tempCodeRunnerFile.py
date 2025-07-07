@@ -1,0 +1,1 @@
+rint("Current list: {list}")
