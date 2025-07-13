@@ -1,0 +1,13 @@
+       Sim`s Mini Bank        
+     Transaction History      
+
+Deposited:   $23,498,274.00
+Withdrew:    $    2,384.00
+Deposited:   $23,904,832.00
+Deposited:   $23,094,832,048.00
+
++------------------------------+
+| Total Deposited: $23,142,235,154.00 
+| Total Withdrawn: $2,384.00     
+| Balance: $23,142,232,770.00    
++------------------------------+
