@@ -5,7 +5,7 @@ A collection of programs assembled and deployed during my time at STCC.
 Just me tinkering. Small, focused scripts to test ideas and build my fluency in Python, Java and other OOP languages.
 Thanks for visiting and enjoy! 
 
-## ***o(*￣▽￣*)ブ ***
+## o(*￣▽￣*)ブ
 --- 
 
 ### Table of Contents
