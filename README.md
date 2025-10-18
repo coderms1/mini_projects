@@ -1,14 +1,14 @@
-# # College Coding Projects Repository
+## 🛡️ Welcome to my **Mini Projects Repository!** 
 
-Welcome to my **School Projects Repository**! 
+### Overview
+A collection of programs assembled and deployed during my time at STCC.
+Just me tinkering. Small, focused scripts to test ideas and build my fluency in Python, Java and other OOP languages.
+Thanks for visiting and enjoy! 
 
->> This repository contains the projects I’ve worked on over the past few months as part of my coursework. 
->> Each project demonstrates different programming concepts, problem-solving techniques, and skills learned throughout the semester.
->> I will cover Python, Java, C#, and several other programming languages along the way.
+## ***o(*￣▽￣*)ブ ***
+--- 
 
----
-
-## Table of Contents
+### Table of Contents
 1. Password Validator -py- (https://github.com/coderms1/Python2_Repo/tree/main/PASSWORD%20VALIDATOR)
 2. Interplanetary Weights Calculator -py- (https://github.com/coderms1/Python2_Repo/tree/main/Interplanetary%20Weights)
 3. Lists and Real Estate Analyzer -py- (https://github.com/coderms1/Python2_Repo/tree/main/Lists%20%26%20Real%20Estate%20Analyzer%20Using%20Files)
@@ -20,23 +20,7 @@ Welcome to my **School Projects Repository**!
 9. Planetary Weights Calculator Level 1 -py- (https://github.com/coderms1/sticky_c0de/blob/main/planetary_weight_calc_L-1.py)
 10. Temperature Converter Level 1 -py- (https://github.com/coderms1/sticky_c0de/blob/main/temperature_converter_L-1.py)
 11. Country GUI w/ Quiz -java- (https://github.com/coderms1/sticky_c0de/tree/main/CountryQuiz)
+
 ---
 
-## Overview
-A collective of programs assigned and deployed at STCC.
-Just me tinkering. Small, focused scripts to test ideas and build fluency in Python.
----
-
-## Resources Utilized in Repo
-- Python
-- SQLite
-- CSV file handling
-- Java
-- SwingUI forms
-- Git/GitHub
-- VS-Code
-- PyCharm
-- IntelliJ
----
-
-## ***THIS IS JUST THE BEGINNING!*** ##
+~ *MS1* 🌛
