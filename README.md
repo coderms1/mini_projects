@@ -1,14 +1,15 @@
 ## 🛡️ Welcome to my **Mini Projects Repository!** 
 
 ### Overview
-A collection of programs assembled and deployed during my time at STCC.
-Just me tinkering. Small, focused scripts to test ideas and build my fluency in Python, Java and other OOP languages.
-Thanks for visiting and enjoy! 
+**A collection of programs assembled and deployed during my time at STCC. These are small, focused scripts I built to test ideas, practice core programming concepts, and gain fluency in Python, Java, and other OOP languages.
+Some projects were created for coursework, others were side experiments while learning. Over time I plan to continue adding more scripts, refactors, and versions as my skills grow.**
+*Thanks for visiting and enjoy browsing through the progression of my work.*
 
 ## o(*￣▽￣*)ブ
 --- 
 
 ### Table of Contents
+```
 1. Password Validator -py- (https://github.com/coderms1/Python2_Repo/tree/main/PASSWORD%20VALIDATOR)
 2. Interplanetary Weights Calculator -py- (https://github.com/coderms1/Python2_Repo/tree/main/Interplanetary%20Weights)
 3. Lists and Real Estate Analyzer -py- (https://github.com/coderms1/Python2_Repo/tree/main/Lists%20%26%20Real%20Estate%20Analyzer%20Using%20Files)
@@ -20,7 +21,9 @@ Thanks for visiting and enjoy!
 9. Planetary Weights Calculator Level 1 -py- (https://github.com/coderms1/sticky_c0de/blob/main/planetary_weight_calc_L-1.py)
 10. Temperature Converter Level 1 -py- (https://github.com/coderms1/sticky_c0de/blob/main/temperature_converter_L-1.py)
 11. Country GUI w/ Quiz -java- (https://github.com/coderms1/sticky_c0de/tree/main/CountryQuiz)
+```
 
----
 
 ~ *MS1* 🌛
+
+
